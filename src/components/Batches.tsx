@@ -1,27 +1,60 @@
-import React from 'react';
-import Paggination from '@/components/Paggination';
-import CourseTable from '@/components/CourseTable';
-import { Input } from "@/components/ui/input"
+import React from "react";
+import Paggination from "@/components/Paggination";
+import CourseTable from "@/components/CourseTable";
+import { Input } from "@/components/ui/input";
 import { HiMagnifyingGlass } from "react-icons/hi2";
+import { LuSettings2 } from "react-icons/lu";
+import SelectOption from "@/components/SelectOption";
+import ClassPlacement from "@/components/ClassPlacement";
 
 const Batches = () => {
-    return (
-        <>
-        <div className='bg-[#FEFEFE] rounded-lg max-w-[1066px] mx-auto p-4 shadow shadow-md '>
-            {/* Search and Filter option  */}
-            <div className='flex'>
-                    <h1 className='uppercase text-base text-[#565656] font-bold'> SHITO-RYU KARATE White Belt </h1>
-                    <div className=""> 
-                    <Input type="text" className='inline' placeholder="Search anything here.." />
-                    <HiMagnifyingGlass className='inline'/>
-                     </div>
+  return (
+    <>
+      <div className="bg-[#FEFEFE] rounded-lg max-w-[1066px] mx-auto p-4 shadow shadow-md ">
+        {/* Search and Filter option  */}
+        <div className="md:flex justify-between">
+          <h1 className="uppercase text-base text-[#565656] font-bold ">
+            {" "}
+            SHITO-RYU KARATE White Belt{" "}
+          </h1>
+          <div className="md:flex">
+            <div className="w-[284px] h-[36px] p-2 flex mr-6 border-md  rounded-full border-2 ">
+              <Input
+                type="text"
+                className=" border-none inline p-1 h-5"
+                placeholder="Search anything here.."
+              />
+              <HiMagnifyingGlass className="inline  mx-2 text-4" />
             </div>
-            <h1>Batch</h1>
-            <CourseTable/>
-            <Paggination/>
-        </div>   
-        </>
-    );
+            <div className="flex">
+              <div className="w-[77px] h-[36px] p-2 flex mr-6 border-md  rounded-full border-2 ">
+                <LuSettings2 className="inline" />
+                <span className="inline text-sm mx-1"> Filter </span>
+              </div>
+              <div className="flex">
+                <SelectOption className="w-[189x] h-[36px] p-2 flex  border-md  rounded-full border-2" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Table  */}
+        <div className="flex">
+          <div className="mr-4">
+            <CourseTable />
+            <div className="flex justify-between">
+              <span className=" w-full mt-2 inline text-sm text-primary-foreground">
+                Showing 1 - {8} out of {24}
+              </span>
+              <Paggination />
+            </div>
+          </div>
+          <div>
+            <ClassPlacement />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Batches;

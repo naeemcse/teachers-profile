@@ -18,6 +18,12 @@ import {
       paymentMethod: "Credit Card",
     },
     {
+      invoice: "02",
+      paymentStatus: "Paid",
+      totalAmount: "$250.00",
+      paymentMethod: "Credit Card",
+    },
+    {
       invoice: "INV002",
       paymentStatus: "Pending",
       totalAmount: "$150.00",
@@ -53,17 +59,24 @@ import {
       totalAmount: "$300.00",
       paymentMethod: "Credit Card",
     },
+    {
+      invoice: "02",
+      paymentStatus: "Paid",
+      totalAmount: "$250.00",
+      paymentMethod: "Credit Card",
+    },
   ]
 const CourseTable = () => {
     return (
-        <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
+        <Table className=' text-[#6F6F6F] text-base bg-whitebg'>
+      {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
       <TableHeader>
-        <TableRow>
-          <TableHead className="w-[100px]">Invoice</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Method</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
+        <TableRow className='bg-[#E9E9EF] text-primary font-bold'>
+          <TableHead className="">No</TableHead>
+          <TableHead>Batch</TableHead>
+          <TableHead>Date </TableHead>
+          <TableHead className="">Class Sart</TableHead>
+          <TableHead className="">Class End</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -72,17 +85,19 @@ const CourseTable = () => {
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
             <TableCell>{invoice.paymentStatus}</TableCell>
             <TableCell>{invoice.paymentMethod}</TableCell>
-            <TableCell className="text-right">{invoice.totalAmount}</TableCell>
-          </TableRow>
+            <TableCell>{invoice.paymentMethod}</TableCell>
+            <TableCell>{invoice.paymentMethod}</TableCell>
+            </TableRow>
         ))}
       </TableBody>
-      <TableFooter>
+      {/* <TableFooter>
         <TableRow>
           <TableCell colSpan={3}>Total</TableCell>
           <TableCell className="text-right">$2,500.00</TableCell>
         </TableRow>
-      </TableFooter>
+      </TableFooter> */}
     </Table>
+   
     );
 };
 

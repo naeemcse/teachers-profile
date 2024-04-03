@@ -13,7 +13,7 @@ const Calender = () => {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="rounded-md border"
+        className="rounded-3xl border"
       />
     );
 };
