@@ -9,10 +9,10 @@ const Hero = () => {
       const maxLength = 400 ;
     return (
         <>
-            <div className="course">
+            <div className="md:ml-10">
                 <h1 className='uppercase text-primary font-extrabold font-2xl text-base'> Karate Course </h1>
                 <div className="md:flex justify-center">
-                   <div className="max-w-[403] h[260px]">
+                   <div className="max-w-[303] h[200px] md:ml-5">
                           <img className="rounded-md" src="/profile.avif" alt="karate" />
                    </div>
                    <div className="max-w-[600px] h[260px] px-4">
