@@ -8,7 +8,7 @@ import { BsPersonFill,BsPersonVideo3,BsPersonRaisedHand } from "react-icons/bs";
 import { MdNotificationsActive } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 const Menus=[
-    {title : "Karate Course" , icon : <PiGraduationCap/> },
+    {title : "Karate Course" , icon : <PiGraduationCap/>,link:"/students" },
     {title : "Online Karate Courses" , icon : <BsPersonVideo3 /> },
     {title : "Students" , icon : <SiGoogleclassroom /> },
     {title : "Attendence" , icon : <BsPersonRaisedHand /> },

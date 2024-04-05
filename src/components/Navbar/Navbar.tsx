@@ -4,8 +4,8 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import Image from "next/image";
 const Menue = [
   { title: "Home", link: "/" },
-  { title: "About", link: "/" },
-  { title: "Courses", link: "/" },
+  { title: "About", link: "/class" },
+  { title: "Courses", link: "/students" },
   { title: "Event", link: "/" },
   { title: "Contact", link: "/" },
 ];

@@ -6,8 +6,9 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { LuSettings2 } from "react-icons/lu";
 import SelectOption from "@/components/SelectOption";
 import ClassPlacement from "@/components/ClassPlacement";
+import StudentsTable from "@/components/StudentsTable"
 
-const Batches = () => {
+const Students = () => {
   return (
     <>
       <div className="bg-[#FEFEFE] border-2 rounded-lg mt-2 mx-2 p-4 shadow-md ">
@@ -40,7 +41,7 @@ const Batches = () => {
         {/* Table  */}
         <div className="flex flex-col-reverse md:flex-row ">
           <div className="mr-4">
-            <CourseTable />
+            <StudentsTable/>
             <div className="flex justify-between">
               <span className="w-full mt-2 inline text-sm text-primary-foreground">
                 Showing 1 - {8} out of {24}
@@ -57,4 +58,4 @@ const Batches = () => {
   );
 };
 
-export default Batches;
+export default Students;
